@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Montserrat&family=Red+Hat+Mono&family=Roboto:wght@300&display=swap');
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: url('money-bg.svg'),
+		linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9));
+	background-repeat: no-repeat;
+	background-size: cover;
+	font-family: Roboto, Arial, sans-serif;
+	min-height: 100vh;
+}
+
+.container {
+	display: flex;
+	flex-direction: row;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	padding: 2rem 1rem;
+	max-width: 100%;
+	width: 800px;
+	max-height: 100%;
+	background-color: rgba(0, 0, 0, 0.7);
+	border-radius: 10px;
+}
+
+.btns {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 300px;
+	border-right: 3px solid whitesmoke;
+	padding: 1rem 2rem;
+}
+
+button {
+	border-radius: 5px;
+	border: 3px solid whitesmoke;
+	background-color: #333;
+	color: whitesmoke;
+	display: block;
+	margin-bottom: 0.5rem;
+	padding: 0.5rem 0.25rem;
+	transition: background-color 0.25s;
+	cursor: pointer;
+	min-width: 200px;
+	width: 100%;
+	position: relative;
+}
+
+button:hover {
+	background-color: rgb(96, 174, 74);
+}
+
+button span {
+	position: absolute;
+	left: 5%;
+	font-weight: bold;
+}
+
+.users {
+	background-color: rgba(245, 245, 245, 0.888);
+	padding: 1rem 2rem;
+	margin: 1rem 2rem;
+	width: 100%;
+	border-radius: 5px;
+	overflow-y: auto;
+}
+
+h2 {
+	border-bottom: 1px solid grey;
+	padding-bottom: 0.5rem;
+	display: flex;
+	justify-content: space-between;
+	font-size: 1rem;
+}
+
+h3 {
+	border-bottom: 1px solid grey;
+	border-radius: 5px;
+	padding: 0.5rem;
+	display: flex;
+	justify-content: space-between;
+	font-size: 1rem;
+	margin-top: 1rem;
+	background-color: rgb(243, 168, 31);
+}
+
+.person {
+	display: flex;
+	justify-content: space-between;
+}
+
+@media (max-width: 760px) {
+	.container {
+		flex-direction: column;
+	}
+	.btns {
+		border-right: none;
+		margin: auto;
+	}
+
+	.users {
+		width: auto;
+	}
+}
